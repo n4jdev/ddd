@@ -75,7 +75,7 @@ if prompt := st.chat_input("What is your message?"):
     response = requests.post('https://n5codsmov4n9imskpaqupq.streamlit.app/api/chat/completions', json=data)
     
     if response.status_code == 200:
-        assistant_response = response.json()['choices'][0]['message']['content']
+        assistant_response = response.json()
         
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": assistant_response})
