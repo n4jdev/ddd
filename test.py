@@ -72,7 +72,7 @@ if prompt := st.chat_input("What is your message?"):
     }
 
     # Send request to local API endpoint
-    response = requests.post('http://localhost:5000/api/chat/completions', json=data)
+    response = requests.post('https://n5codsmov4n9imskpaqupq.streamlit.app/api/chat/completions', json=data)
     
     if response.status_code == 200:
         assistant_response = response.json()['choices'][0]['message']['content']
